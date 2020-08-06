@@ -29,9 +29,8 @@ npm install
 
 ```sh
 npm start
-
-Use [Postman](https://www.postman.com/downloads/) to view routes
 ```
+Use [Postman](https://www.postman.com/downloads/) to view routes
 
 
 
@@ -118,7 +117,7 @@ testing coming soon
 
 👤 **Brandi Apetsi**
 
-* Website: BrandiApetsi.com(https:Brandiapetsi.com)
+* Website: [BrandiApetsi.com](https:Brandiapetsi.com)
 * Twitter: [@DaBusyB](https://twitter.com/DaBusyB)
 * Github: [@DaBusyB](https://github.com/DaBusyB)
 * LinkedIn: [brandi-apetsi](https://linkedin.com/in/https:\/\/www.linkedin.com\/in\/brandi-apetsi\/)
