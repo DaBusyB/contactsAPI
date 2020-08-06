@@ -29,14 +29,17 @@ npm install
 
 ```sh
 npm start
+
+Use [Postman](https://www.postman.com/downloads/) to view routes
 ```
 
-```sh
-https://www.postman.com/downloads/
-```
 
+
+## Routes and Expected Output
 ```sh
+*****
 List All Contacts: http://localhost:4001/contacts/
+*****
 JSON
 [
   {
@@ -106,14 +109,16 @@ JSON
 
 
 ## Run tests
-
+```sh
+testing coming soon
+```
 
 
 ## Author
 
 👤 **Brandi Apetsi**
 
-* Website: BrandiApetsi.com
+* Website: BrandiApetsi.com(https:Brandiapetsi.com)
 * Twitter: [@DaBusyB](https://twitter.com/DaBusyB)
 * Github: [@DaBusyB](https://github.com/DaBusyB)
 * LinkedIn: [brandi-apetsi](https://linkedin.com/in/https:\/\/www.linkedin.com\/in\/brandi-apetsi\/)
