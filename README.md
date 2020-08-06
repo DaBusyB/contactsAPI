@@ -36,35 +36,71 @@ https://www.postman.com/downloads/
 ```
 
 ```sh
-List All Contacts: http://localhost:4001/
+List All Contacts: http://localhost:4001/contacts/
 JSON
-{
+[
+  {
+      "id": 1,
+      "name": "Viola Davis",
+      "number": 3017660448,
+      "email": "viola@violadavis.com"
+  },
+  {
+      "id": 2,
+      "name": "Nell Carter",
+      "number": 2028999411,
+      "email": "mscarter@gimmeabreak.com"
+  },
+  {
+      "id": 3,
+      "name": "Issa Rae",
+      "number": 4102229876,
+      "email": "issa@rae.com"
+  },
+  {
+      "id": 7,
+      "name": "Eartha Kitt",
+      "number": 9194899231,
+      "email": "kittn@earthakitt.com"
+  }
+]
 
-}
-
-
-List Contacts by Their ID: http://localhost:4001/<id>
+*****
+List Contacts by Their ID: http://localhost:4001/contacts/<id>
+*****
 JSON
-{
-  
-}
+[
+    {
+        "id": 1,
+        "name": "Viola Davis",
+        "number": 3017660448,
+        "email": "viola@violadavis.com"
+    }
+]
 
+*****
 Add a Contact: http://localhost:4001/
+*****
+*ensure body settings are raw JSON*
 JSON
-{
-  
-}
+[
+  <id of new entry>
+]
 
+*****
 Edit a Contact: http://localhost:4001/<id>
+*****
 JSON
 {
-  
+  "updated": <number of entries updated>
 }
 
+*****
 Delete a Contact: http://localhost:4001/<id>
+*****
 JSON
 {
-  
+  "deleted": <number of entries deleted>
 }
 ```
 
