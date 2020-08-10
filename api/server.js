@@ -1,6 +1,6 @@
 const express = require("express");
 
-const contactsRouter = require("./contacts/contacts-router.js");
+const contactsRouter = require("../contacts/contacts-router.js");
 
 const app = express();
 
