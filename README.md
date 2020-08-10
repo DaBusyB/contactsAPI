@@ -37,7 +37,7 @@ Use [Postman](https://www.postman.com/downloads/) to view routes
 ## Routes and Expected Output
 ```sh
 *****
-List All Contacts: http://localhost:4001/contacts/
+List All Contacts: GET /contacts
 *****
 JSON
 [
@@ -68,7 +68,7 @@ JSON
 ]
 
 *****
-List Contacts by Their ID: http://localhost:4001/contacts/<id>
+List Contacts by Their ID: GET /contacts/<id>
 *****
 JSON
 [
@@ -81,7 +81,7 @@ JSON
 ]
 
 *****
-Add a Contact: http://localhost:4001/
+Add a Contact: POST /
 *****
 *ensure body settings are raw JSON*
 JSON
@@ -90,7 +90,7 @@ JSON
 ]
 
 *****
-Edit a Contact: http://localhost:4001/<id>
+Edit a Contact: PUT /<id>
 *****
 JSON
 {
@@ -98,7 +98,7 @@ JSON
 }
 
 *****
-Delete a Contact: http://localhost:4001/<id>
+Delete a Contact: DELETE /<id>
 *****
 JSON
 {
