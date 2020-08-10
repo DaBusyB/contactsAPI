@@ -15,9 +15,10 @@
   </a>
 </p>
 
-> A simple API to manage your contacts. This was created using Node, Express, SQLite and Knex.
+> A simple API to manage your contacts. This was created using Node, Express, SQLite and Knex. For testing, I'm using jest, and supertest. Heroku Postgress will be used to deploy to Heroku.
 
 ### 🏠 [Homepage](https://github.com/DaBusyB/contactsAPI#readme)
+### ⚛ [Heroku(coming soon)](https://github.com/DaBusyB/contactsAPI#readme)
 
 ## Install
 
@@ -30,14 +31,14 @@ npm install
 ```sh
 npm start
 ```
-Use [Postman](https://www.postman.com/downloads/) to view routes
-
+Use [Postman](https://www.postman.com/downloads/) to view and manipulate routes
 
 
 ## Routes and Expected Output
+
 ```sh
 *****
-List All Contacts: GET /contacts
+List All Contacts: GET /api/contacts
 *****
 JSON
 [
@@ -68,7 +69,7 @@ JSON
 ]
 
 *****
-List Contacts by Their ID: GET /contacts/<id>
+List Contacts by Their ID: GET /api/contacts/<id>
 *****
 JSON
 [
@@ -81,7 +82,7 @@ JSON
 ]
 
 *****
-Add a Contact: POST /
+Add a Contact: POST /api/contacts
 *****
 *ensure body settings are raw JSON*
 JSON
@@ -98,7 +99,7 @@ JSON
 }
 
 *****
-Delete a Contact: DELETE /<id>
+Delete a Contact: DELETE /api/contacts/<id>
 *****
 JSON
 {
@@ -109,7 +110,7 @@ JSON
 
 ## Run tests
 ```sh
-testing coming soon
+npm test
 ```
 
 

@@ -3,6 +3,7 @@ const supertest = require('supertest')
 
 // access to server.js
 const server = require('./server.js')
+const { get } = require('../contacts/contacts-router.js')
 
 describe('server', () => {
     it("tests are running", () => {
@@ -17,6 +18,15 @@ describe('server', () => {
                 .then(res => {
                     expect(res.status).toBe(200)
                 })
+        });
+
+        it('should return JSON', () => {
+            return supertest(server)
+
+            .get("/api/contacts")
+            .then(res => {
+                expect(res.type).toMatch(/json/i)
+            })
         })
     })
 })
