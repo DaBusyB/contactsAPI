@@ -91,7 +91,7 @@ JSON
 ]
 
 *****
-Edit a Contact: PUT /<id>
+Edit a Contact: PUT /api/contacts/<id>
 *****
 JSON
 {
