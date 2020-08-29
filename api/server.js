@@ -1,16 +1,21 @@
-const express = require("express");
+const express = require('express');
+const helmet = require('helmet')
+const morgan = require('morgan')
 
+const contactsRouter = require('../routes/contacts/contacts-router.js');
+const authRouter = require('../routes/auth//auth-router.js')
 
-const contactsRouter = require("../routes/contacts/contacts-router.js");
+const server = express();
 
-const app = express();
-
-//Middleware
-app.use(express.json());
+//Global Middleware
+server.use(morgan())
+server.use(helmet())
+server.use(express.json());
 
 
 
 //Routes
-app.use("/api/contacts", contactsRouter);
+server.use('/api/contacts', contactsRouter);
+server.use('api/auth', authRouter)
 
-module.exports = app;
+module.exports = server;

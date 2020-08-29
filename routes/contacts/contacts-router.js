@@ -1,7 +1,7 @@
 const express = require('express');
+const router = express.Router();
 const knex = require('../../data/db-config.js');
 
-const router = express.Router();
 
 router.get('/', async (req, res) => {
     try {
