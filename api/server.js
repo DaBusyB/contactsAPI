@@ -8,7 +8,7 @@ const authRouter = require('../routes/auth//auth-router.js')
 const server = express();
 
 //Global Middleware
-server.use(morgan())
+server.use(morgan('combined'))
 server.use(helmet())
 server.use(express.json());
 
