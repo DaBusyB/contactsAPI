@@ -3,7 +3,7 @@ const supertest = require('supertest')
 
 // access to server.js
 const server = require('./server.js')
-const { get } = require('../contacts/contacts-router.js')
+const { get } = require('../routes/contacts/contacts-router.js')
 
 describe('server', () => {
     it("tests are running", () => {
