@@ -33,6 +33,10 @@ npm start
 ```
 Use [Postman](https://www.postman.com/downloads/) to view and manipulate routes
 
+## Run tests
+```sh
+npm test
+```
 
 ## Routes and Expected Output
 
@@ -108,10 +112,6 @@ JSON
 ```
 
 
-## Run tests
-```sh
-npm test
-```
 
 
 ## Author
