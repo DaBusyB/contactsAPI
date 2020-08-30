@@ -2,6 +2,20 @@
 exports.up = function(knex) {
     return knex.schema
 
+    .createTable('contacts', tbl => {
+        tbl.increments();
+
+        tbl.string('name', 128)
+            .notNullable();
+
+        tbl.integer('number')
+            .unique()
+            .notNullable();
+
+        tbl.string('email')
+            .unique()
+    })
+
     .createTable('users', tbl => {
         tbl.increments()
 

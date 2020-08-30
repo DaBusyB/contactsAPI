@@ -2,9 +2,10 @@ const express = require('express');
 const router = express.Router();
 
 const knex = require('../../data/db-config.js');
+const auth = require('../users/restriction-middleware.js')
 
 
-router.get('/', async (req, res) => {
+router.get('/',  async (req, res) => {
     try {
         const contacts = await knex('contacts')
         res.json(contacts)
@@ -13,7 +14,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', auth, async (req, res) => {
     const {id} = req.params
 
     try {

@@ -12,7 +12,7 @@ module.exports = {
       directory: './data/migrations'
     },
     seeds: {
-      directory: './seeds/01-contacts.js'
+      directory: './data/seeds'
     }
   }
 };
