@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const knex = require('../../data/db-config.js');
-const auth = require('../users/restriction-middleware.js')
+const auth = require('../auth/restriction-middleware.js')
 
 
 router.get('/', auth, async (req, res) => {

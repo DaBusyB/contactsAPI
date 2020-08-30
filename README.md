@@ -41,6 +41,38 @@ npm test
 ## Routes and Expected Output
 
 ```sh
+
+AUTH
+*****
+Register To Use API: POST /api/users/register
+*****
+*ensure body settings are raw JSON*
+JSON
+[
+  <id of new entry>
+]
+
+*****
+Log Into API: POST /api/users/login
+*****
+JSON
+{
+    "message": `Welcome ${username}`
+}
+
+*****
+Log Out Of API: GET /api/users/logout
+*****
+JSON
+{
+    "message": `Sorry ${username}, you are NOT logged out, try again`
+}
+     OR
+{
+    "message": "Peace out, you have successfully logged out"
+}
+
+CONTACTS - register and log
 *****
 List All Contacts: GET /api/contacts
 *****
@@ -110,9 +142,6 @@ JSON
   "deleted": <number of entries deleted>
 }
 ```
-
-
-
 
 ## Author
 

@@ -6,15 +6,15 @@ const knex = require('../../data/db-config.js')
 
 const bcrypt = require('bcryptjs')
 
-router.get('/', async (req, res) => {
+// router.get('/', async (req, res) => {
 
-    try {
-        const getUsers = await knex('users')
-        res.json(getUsers)
-    } catch(err) {
-        res.status(404).json({message: 'users not found'})
-    }
-})
+//     try {
+//         const getUsers = await knex('users')
+//         res.json(getUsers)
+//     } catch(err) {
+//         res.status(404).json({message: 'users not found'})
+//     }
+// })
 
 router.post('/register', async (req, res) => {
     newUser = req.body
@@ -61,9 +61,9 @@ router.get('/logout', (req, res) => {
     if(req.session) {
         req.session.destroy(err => {
             if(err) {
-                res.send('Error, you cannot log out')
+                res.status(403).json({message: `Sorry ${req.session.user.username}, you are NOT logged out, try again`})
             } else {
-                res.send('You have successfully logged out')
+                res.status(200).json({message: `Peace out, you have successfully logged out`})
             }
         })
     } else {
