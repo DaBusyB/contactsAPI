@@ -5,10 +5,10 @@ const knex = require('../../data/db-config.js');
 const auth = require('../users/restriction-middleware.js')
 
 
-router.get('/',  async (req, res) => {
+router.get('/', auth, async (req, res) => {
     try {
         const contacts = await knex('contacts')
-        res.json(contacts)
+        res.status(200).json(contacts)
     } catch(err) {
         res.status(500).json({message: 'contacts not found', error: err})
     }
