@@ -40,9 +40,8 @@ npm test
 
 ## Routes and Expected Output
 
+#AUTH
 ```sh
-
-AUTH
 *****
 Register To Use API: POST /api/users/register
 *****
@@ -71,8 +70,11 @@ JSON
 {
     "message": "Peace out, you have successfully logged out"
 }
+```
 
-CONTACTS - register and log
+#CONTACTS - register and log
+
+```sh
 *****
 List All Contacts: GET /api/contacts
 *****
