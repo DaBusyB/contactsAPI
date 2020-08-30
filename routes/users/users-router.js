@@ -6,7 +6,15 @@ const knex = require('../../data/db-config.js')
 
 const bcrypt = require('bcryptjs')
 
+router.get('/', async (req, res) => {
 
+    try {
+        const getUsers = await knex('users')
+        res.json(getUsers)
+    } catch(err) {
+        res.status(404).json({message: 'users not found'})
+    }
+})
 
 router.post('/register', async (req, res) => {
      newUser = req.body
