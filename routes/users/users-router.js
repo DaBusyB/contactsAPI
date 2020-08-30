@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 })
 
 router.post('/register', async (req, res) => {
-     newUser = req.body
+    newUser = req.body
 
     const hashedPassword = bcrypt.hashSync(newUser.password, 15)
     newUser.password = hashedPassword
@@ -31,8 +31,12 @@ router.post('/register', async (req, res) => {
     }
 })
 
-// router.post('login', (req, res) => {
+router.post('/login', (req, res) => {
 
-// })
+})
+
+router.get('/logout', (req, res) => {
+
+})
 
 module.exports = router
