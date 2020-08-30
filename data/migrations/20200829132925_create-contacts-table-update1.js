@@ -5,16 +5,16 @@ exports.up = function(knex) {
     .createTable('users', tbl => {
         tbl.increments()
 
-        tbl.text('username', 100)
-            .unique()
+        tbl.string('username', 100)
             .notNullable()
+            .unique()
 
-        tbl.text('password', 150)
+        tbl.string('password', 150)
             .notNullable()
     })
 };
 
 
-  exports.down = function(knex) {
-    return knex.schema.dropTableIfExists('contacts').dropTableIfExists('users')
-  };
+exports.down = function(knex) {
+return knex.schema.dropTableIfExists('users')
+};
